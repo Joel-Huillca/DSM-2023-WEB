@@ -1,66 +1,68 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
+> Proyecto de Desarrollo de Soluciones Móviles 2023, Profesor: Ricardo Paul Urvina Cordova 
+<br>
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <p align="center" ><img src="https://i.postimg.cc/BZ2yQdcV/Larabel-y-postaman.jpg" width="400"></p>       
 </p>
 
-## About Laravel
+</br>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+ ***Este proyecto tambien tiene un  **[sistema móvil](https://github.com/Joel-Huillca/ProyectoDSM.git)** utilizando la tecnologia React Native.***
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<br>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Plataforma WEB (Laravel)
+El proyecto consiste en levantar información de empresas y su conocimiento en tecnología a través de un formulario en línea. La aplicación tiene dos partes: una para los usuarios finales (empresas) que pueden completar el formulario y ver un resumen de sus calificaciones, y otra para los administradores del sistema que pueden gestionar los módulos correspondientes y crear nuevos formularios.
 
-## Learning Laravel
+</br>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Utilizamos software especializado para construir la página web.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+| Herramientas |
+| -------------|
+| ● [MySQL](https://www.mysql.com/products/workbench/) |
+| ● [Laravel](https://laravel.com/docs/4.2) |
+| ● [Node](https://nodejs.org/es/download) |
+| ● [Composer](https://getcomposer.org/download/) |
+| ● [Visual Studio](https://code.visualstudio.com/download) |
+| ● [Postaman](https://www.postman.com/downloads/) |
+| ● Otros. |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+### Colaboración 
+- [Cristobal Osses](https://github.com/CristobalKronos)
+- [Joel Huillca](https://github.com/Joel-Huillca)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## ¿Como iniciar?
+Este comando instalará las dependencias del proyecto (Node.js):
+```diff
+npm install
+```
 
-### Premium Partners
+Instalamos todas las dependencias y paquetes necesarios. Recordar tener la misma version con el PHP (para este proyecto se ocupo una mayor a 8.0.0)
+```diff
+composer install
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+Acontinuacion creas una copia del archivo **.env** y colocamos nuestro datos para conectar al BD (DB_USERNAME, DB_PASSWORD) para despues generar una clave de aplicación única:
+```diff
+php artisan key:generate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Limpiamos la version anterior:
+```diff
+php artisan config:clear
+php artisan cache:clear
+```
+Luego cargamos nuestros nuestros datos a las tablas de la base de datos con los datos de prueba o iniciales que se han especificado en los archivos de semillas:
 
-## Code of Conduct
+```diff
+php artisan migrate  --seed 
+```
+Para finalizae iniciamos el proyecto:
+```diff
+php artisan serve
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
