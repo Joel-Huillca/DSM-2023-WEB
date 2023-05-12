@@ -59,7 +59,7 @@ Luego cargamos nuestros nuestros datos a las tablas de la base de datos con los 
 ```diff
 php artisan migrate  --seed 
 ```
-Para finalizae iniciamos el proyecto:
+Iniciamos el proyecto:
 ```diff
 php artisan serve
 ```
